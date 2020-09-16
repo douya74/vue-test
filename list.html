@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表渲染</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-for= "(item, index) of list" :key="item.id">
+            <div>
+                {{item.text}}  ----{{index}}
+            </div>
+            <span>
+                {{item.text}}
+            </span>
+        </div>
+    </div>
+
+    <script>
+        //  push   pop   shift   unshift   splice  sort   reverse
+        var vm = new Vue({
+            el: "#app",
+            data:{
+                list:[{
+                    id: "111",
+                    text: "ddd"
+                },{
+                    id:"222",
+                    text:"ggg"
+                },{
+                    id:"333",
+                    text:"hhh"
+                // "111",
+                // "222",
+                // "333",
+                }]
+            }
+        })
+    </script>
+</body>
+</html>
