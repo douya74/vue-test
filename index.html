@@ -15,6 +15,7 @@
             <todo-item v-bind:content="item" 
                        v-bind:index = "index" 
                        v-for="(item,index) in list"
+                       :key="index"
                        @delete="handleItemDelete">
             </todo-item>
         </ul>
